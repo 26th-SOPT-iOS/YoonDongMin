@@ -12,6 +12,10 @@
 
 ### 1주차 과제
 
+1️⃣ ***[Navigation활용 화면 이동]([https://github.com/26th-SOPT-iOS/YoonDongMin/tree/master/1%EC%A3%BC%EC%B0%A8%20%EA%B3%BC%EC%A0%9C/26th_Seminar_FirstWeek](https://github.com/26th-SOPT-iOS/YoonDongMin/tree/master/1주차 과제/26th_Seminar_FirstWeek))***
+
+2️⃣ ***[로그인 화면 구현]([https://github.com/26th-SOPT-iOS/YoonDongMin/tree/master/1%EC%A3%BC%EC%B0%A8%20%EA%B3%BC%EC%A0%9C/26th_iOS_firstAssignment](https://github.com/26th-SOPT-iOS/YoonDongMin/tree/master/1주차 과제/26th_iOS_firstAssignment))***
+
 ---
 
 ### 2주차 과제
