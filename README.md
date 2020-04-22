@@ -20,6 +20,8 @@
 
 ### 2주차 과제
 
+1️⃣ ***[실습자료](https://github.com/26th-SOPT-iOS/YoonDongMin/tree/master/2%EC%A3%BC%EC%B0%A8%20%EA%B3%BC%EC%A0%9C/26th_iOS_secondWeek)***
+
 ---
 
 ### 3주차 과제
