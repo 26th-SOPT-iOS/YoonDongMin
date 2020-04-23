@@ -95,34 +95,6 @@
             </objects>
             <point key="canvasLocation" x="1091" y="879"/>
         </scene>
-        <!--Sub View Controller-->
-        <scene sceneID="F95-Wr-ZDF">
-            <objects>
-                <viewController id="Wf1-Nf-3nU" customClass="subViewController" customModule="_6th_iOS_secondWeek" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2xU-IR-Vny">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KakaoTalk_Photo_2020-04-03-17-59-7" translatesAutoresizingMaskIntoConstraints="NO" id="cI9-9h-wgF">
-                                <rect key="frame" x="33" y="70" width="348" height="327"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="cI9-9h-wgF" secondAttribute="height" multiplier="116:109" id="JXg-2U-zU6"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="cI9-9h-wgF" firstAttribute="centerX" secondItem="c2N-8j-qUV" secondAttribute="centerX" id="36A-Xu-YcG"/>
-                            <constraint firstItem="cI9-9h-wgF" firstAttribute="top" secondItem="c2N-8j-qUV" secondAttribute="top" constant="70" id="3zC-lH-vpM"/>
-                            <constraint firstItem="cI9-9h-wgF" firstAttribute="width" secondItem="2xU-IR-Vny" secondAttribute="width" multiplier="0.84058" id="QSW-ng-Am3"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="c2N-8j-qUV"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eUF-bE-jIC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-746" y="1620"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="cyq-oR-ADe">
             <objects>
@@ -164,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EL8-eO-2v0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="1591"/>
+            <point key="canvasLocation" x="332" y="1661"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qw9-4B-acr">
@@ -208,7 +180,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="KakaoTalk_Photo_2020-04-03-17-59-7" width="2268" height="2268"/>
         <image name="house" catalog="system" width="128" height="110"/>
     </resources>
 </document>
