@@ -25,7 +25,7 @@ class SignupViewController: UIViewController {
         mainViewController.id = idTextField.text
         mainViewController.pw = pwTextField.text
         self.present(mainViewController, animated: true) {
-            self.navigationController?.popViewController(animated: true)
+            self.navigationController?.popViewController(animated: false)
         }
     }
 }
