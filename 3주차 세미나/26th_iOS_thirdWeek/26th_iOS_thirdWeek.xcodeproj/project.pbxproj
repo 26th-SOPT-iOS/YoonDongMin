@@ -19,6 +19,9 @@
 		9D37D7AA245EAE0200508FE9 /* AudioPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D37D7A9245EAE0200508FE9 /* AudioPlayerView.swift */; };
 		9D37D7AC245ECB6D00508FE9 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D37D7AB245ECB6C00508FE9 /* Music.swift */; };
 		9D37D7AE245FDB1300508FE9 /* SampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D37D7AD245FDB1300508FE9 /* SampleTableViewController.swift */; };
+		9D37D7B0245FEFD500508FE9 /* WaetherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D37D7AF245FEFD500508FE9 /* WaetherCell.swift */; };
+		9D37D7B4245FF53200508FE9 /* DataInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D37D7B3245FF53200508FE9 /* DataInformation.swift */; };
+		9D37D7B6246007A800508FE9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D37D7B5246007A800508FE9 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		9D37D7A9245EAE0200508FE9 /* AudioPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerView.swift; sourceTree = "<group>"; };
 		9D37D7AB245ECB6C00508FE9 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		9D37D7AD245FDB1300508FE9 /* SampleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTableViewController.swift; sourceTree = "<group>"; };
+		9D37D7AF245FEFD500508FE9 /* WaetherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaetherCell.swift; sourceTree = "<group>"; };
+		9D37D7B3245FF53200508FE9 /* DataInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInformation.swift; sourceTree = "<group>"; };
+		9D37D7B5246007A800508FE9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,9 @@
 				9D37D7A9245EAE0200508FE9 /* AudioPlayerView.swift */,
 				9D37D7AB245ECB6C00508FE9 /* Music.swift */,
 				9D37D7AD245FDB1300508FE9 /* SampleTableViewController.swift */,
+				9D37D7AF245FEFD500508FE9 /* WaetherCell.swift */,
+				9D37D7B3245FF53200508FE9 /* DataInformation.swift */,
+				9D37D7B5246007A800508FE9 /* DetailViewController.swift */,
 			);
 			path = 26th_iOS_thirdWeek;
 			sourceTree = "<group>";
@@ -158,11 +167,14 @@
 			files = (
 				9D37D7AA245EAE0200508FE9 /* AudioPlayerView.swift in Sources */,
 				9D37D794245C99DE00508FE9 /* ViewController.swift in Sources */,
+				9D37D7B0245FEFD500508FE9 /* WaetherCell.swift in Sources */,
+				9D37D7B6246007A800508FE9 /* DetailViewController.swift in Sources */,
 				9D37D790245C99DE00508FE9 /* AppDelegate.swift in Sources */,
 				9D37D7A4245C99FC00508FE9 /* ExProtocol.swift in Sources */,
 				9D37D7A8245EADDB00508FE9 /* ViewControllerB.swift in Sources */,
 				9D37D7A6245EADD100508FE9 /* ViewControllerA.swift in Sources */,
 				9D37D792245C99DE00508FE9 /* SceneDelegate.swift in Sources */,
+				9D37D7B4245FF53200508FE9 /* DataInformation.swift in Sources */,
 				9D37D7AC245ECB6D00508FE9 /* Music.swift in Sources */,
 				9D37D7AE245FDB1300508FE9 /* SampleTableViewController.swift in Sources */,
 			);
