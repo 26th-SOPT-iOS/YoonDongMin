@@ -12,8 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
-    
-    @IBOutlet var buttons: [UIButton]!
+    @IBOutlet weak var loginButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -23,13 +22,7 @@ class ViewController: UIViewController {
     }
 
     private func setButtons() {
-        for button in buttons {
-            button.layer.cornerRadius = button.frame.width / 20
-            button.layer.shadowOffset = .zero
-            button.layer.shadowRadius = 16
-            button.layer.shadowColor = UIColor.black.cgColor
-            button.layer.shadowOpacity = 0.4
-        }
+        
     }
     
     @IBAction func login(_ sender: Any) {
