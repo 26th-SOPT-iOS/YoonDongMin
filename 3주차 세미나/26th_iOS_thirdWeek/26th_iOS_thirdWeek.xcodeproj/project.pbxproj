@@ -22,6 +22,8 @@
 		9D37D7B0245FEFD500508FE9 /* WaetherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D37D7AF245FEFD500508FE9 /* WaetherCell.swift */; };
 		9D37D7B4245FF53200508FE9 /* DataInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D37D7B3245FF53200508FE9 /* DataInformation.swift */; };
 		9D37D7B6246007A800508FE9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D37D7B5246007A800508FE9 /* DetailViewController.swift */; };
+		9DB9BE2324631640002EB60F /* CollectionViewSampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB9BE2224631640002EB60F /* CollectionViewSampleVC.swift */; };
+		9DB9BE25246322D5002EB60F /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB9BE24246322D5002EB60F /* MusicCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		9D37D7AF245FEFD500508FE9 /* WaetherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaetherCell.swift; sourceTree = "<group>"; };
 		9D37D7B3245FF53200508FE9 /* DataInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInformation.swift; sourceTree = "<group>"; };
 		9D37D7B5246007A800508FE9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9DB9BE2224631640002EB60F /* CollectionViewSampleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSampleVC.swift; sourceTree = "<group>"; };
+		9DB9BE24246322D5002EB60F /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 				9D37D7AF245FEFD500508FE9 /* WaetherCell.swift */,
 				9D37D7B3245FF53200508FE9 /* DataInformation.swift */,
 				9D37D7B5246007A800508FE9 /* DetailViewController.swift */,
+				9DB9BE2224631640002EB60F /* CollectionViewSampleVC.swift */,
+				9DB9BE24246322D5002EB60F /* MusicCell.swift */,
 			);
 			path = 26th_iOS_thirdWeek;
 			sourceTree = "<group>";
@@ -171,8 +177,10 @@
 				9D37D7B6246007A800508FE9 /* DetailViewController.swift in Sources */,
 				9D37D790245C99DE00508FE9 /* AppDelegate.swift in Sources */,
 				9D37D7A4245C99FC00508FE9 /* ExProtocol.swift in Sources */,
+				9DB9BE2324631640002EB60F /* CollectionViewSampleVC.swift in Sources */,
 				9D37D7A8245EADDB00508FE9 /* ViewControllerB.swift in Sources */,
 				9D37D7A6245EADD100508FE9 /* ViewControllerA.swift in Sources */,
+				9DB9BE25246322D5002EB60F /* MusicCell.swift in Sources */,
 				9D37D792245C99DE00508FE9 /* SceneDelegate.swift in Sources */,
 				9D37D7B4245FF53200508FE9 /* DataInformation.swift in Sources */,
 				9D37D7AC245ECB6D00508FE9 /* Music.swift in Sources */,
