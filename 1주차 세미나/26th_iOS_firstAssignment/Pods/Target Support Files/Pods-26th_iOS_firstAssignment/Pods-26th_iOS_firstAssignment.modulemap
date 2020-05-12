@@ -1,0 +1,6 @@
+framework module Pods_26th_iOS_firstAssignment {
+  umbrella header "Pods-26th_iOS_firstAssignment-umbrella.h"
+
+  export *
+  module * { export * }
+}

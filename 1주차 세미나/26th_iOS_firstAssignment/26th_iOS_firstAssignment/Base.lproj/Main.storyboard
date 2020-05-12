@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pe0-nw-HkS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X4f-tP-AK6">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -67,18 +67,24 @@
                                 <rect key="frame" x="38" y="465" width="299" height="53"/>
                                 <color key="backgroundColor" red="0.067198827860000004" green="0.17179468270000001" blue="0.53008449079999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="로그인하기">
+                                <state key="normal" title="로그인">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e6m-Kr-6ci"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ahk-ho-wGZ">
-                                <rect key="frame" x="38" y="535" width="299" height="52.666666666666629"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Heh-fz-Qjr">
+                                <rect key="frame" x="70" y="535" width="235" height="30"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아직 회원이 아니신가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJs-Vt-AIf">
+                                        <rect key="frame" x="0.0" y="0.0" width="145.33333333333334" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CJa-Nm-ZHr">
-                                        <rect key="frame" x="176" y="11.333333333333371" width="82" height="30"/>
+                                        <rect key="frame" x="145.33333333333334" y="0.0" width="89.666666666666657" height="30"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="회원가입 하기">
@@ -91,21 +97,11 @@
                                             </attributedString>
                                         </state>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아직 회원이 아니신가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJs-Vt-AIf">
-                                        <rect key="frame" x="30" y="17.333333333333371" width="146" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="CJa-Nm-ZHr" firstAttribute="leading" secondItem="GJs-Vt-AIf" secondAttribute="trailing" id="Ibc-P2-waq"/>
-                                    <constraint firstItem="GJs-Vt-AIf" firstAttribute="leading" secondItem="Ahk-ho-wGZ" secondAttribute="leading" constant="30" id="dGW-rV-RSZ"/>
-                                    <constraint firstItem="CJa-Nm-ZHr" firstAttribute="centerY" secondItem="Ahk-ho-wGZ" secondAttribute="centerY" id="wKw-dw-kRK"/>
-                                    <constraint firstItem="GJs-Vt-AIf" firstAttribute="centerY" secondItem="Ahk-ho-wGZ" secondAttribute="centerY" id="yGI-IS-k1s"/>
+                                    <constraint firstItem="GJs-Vt-AIf" firstAttribute="width" secondItem="Heh-fz-Qjr" secondAttribute="width" multiplier="0.61844" id="YRF-2C-PPr"/>
                                 </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -115,19 +111,18 @@
                             <constraint firstItem="8KU-nZ-ITB" firstAttribute="height" secondItem="jhn-iO-Xw0" secondAttribute="height" id="AOg-kc-uOS"/>
                             <constraint firstItem="8KU-nZ-ITB" firstAttribute="trailing" secondItem="jhn-iO-Xw0" secondAttribute="trailing" id="DcE-Vf-Nnq"/>
                             <constraint firstItem="tCw-fm-tlU" firstAttribute="top" secondItem="8KU-nZ-ITB" secondAttribute="bottom" constant="39" id="Gip-er-PRa"/>
-                            <constraint firstItem="Ahk-ho-wGZ" firstAttribute="height" secondItem="tCw-fm-tlU" secondAttribute="height" id="IXp-d0-pOd"/>
                             <constraint firstItem="tCw-fm-tlU" firstAttribute="leading" secondItem="8KU-nZ-ITB" secondAttribute="leading" id="MlH-YD-qvr"/>
                             <constraint firstItem="jhn-iO-Xw0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="Mw4-se-B4a"/>
                             <constraint firstItem="tCw-fm-tlU" firstAttribute="trailing" secondItem="8KU-nZ-ITB" secondAttribute="trailing" id="P4b-jj-GPV"/>
                             <constraint firstItem="tCw-fm-tlU" firstAttribute="height" secondItem="8KU-nZ-ITB" secondAttribute="height" multiplier="1.2" id="Rc3-yj-bvS"/>
                             <constraint firstItem="L5m-jm-MeG" firstAttribute="trailing" secondItem="ETd-Z0-Rmu" secondAttribute="trailing" id="afX-Ie-aE7"/>
                             <constraint firstItem="L5m-jm-MeG" firstAttribute="leading" secondItem="ETd-Z0-Rmu" secondAttribute="leading" id="bP6-L2-LGS"/>
-                            <constraint firstItem="Ahk-ho-wGZ" firstAttribute="top" secondItem="tCw-fm-tlU" secondAttribute="bottom" constant="17" id="dyL-b0-b2z"/>
-                            <constraint firstItem="Ahk-ho-wGZ" firstAttribute="leading" secondItem="tCw-fm-tlU" secondAttribute="leading" id="gSN-om-dYC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Heh-fz-Qjr" secondAttribute="trailing" constant="70" id="nTH-Qt-xw4"/>
+                            <constraint firstItem="Heh-fz-Qjr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="rvL-RZ-Ni7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jhn-iO-Xw0" secondAttribute="trailing" constant="38" id="sEr-vd-IqM"/>
-                            <constraint firstItem="Ahk-ho-wGZ" firstAttribute="trailing" secondItem="tCw-fm-tlU" secondAttribute="trailing" id="seT-nk-arH"/>
                             <constraint firstItem="8KU-nZ-ITB" firstAttribute="top" secondItem="jhn-iO-Xw0" secondAttribute="bottom" constant="18" id="uhb-G1-Gcy"/>
                             <constraint firstItem="jhn-iO-Xw0" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0541872" id="xHc-mE-P2K"/>
+                            <constraint firstItem="Heh-fz-Qjr" firstAttribute="top" secondItem="tCw-fm-tlU" secondAttribute="bottom" constant="17" id="xcI-AN-Ebb"/>
                             <constraint firstItem="DiV-vh-n1f" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yMa-83-UfM"/>
                             <constraint firstItem="jhn-iO-Xw0" firstAttribute="top" secondItem="DiV-vh-n1f" secondAttribute="bottom" constant="58" id="zdo-sw-01H"/>
                         </constraints>
@@ -135,16 +130,20 @@
                     </view>
                     <navigationItem key="navigationItem" id="MJH-6C-yWv"/>
                     <connections>
+                        <outlet property="guidLabel" destination="GJs-Vt-AIf" id="8dB-lP-KMI"/>
                         <outlet property="idTextField" destination="ETd-Z0-Rmu" id="aOp-yk-fRo"/>
                         <outlet property="loginButton" destination="tCw-fm-tlU" id="Ba5-OQ-D60"/>
                         <outlet property="pwTextField" destination="L5m-jm-MeG" id="aCF-Kw-N7O"/>
+                        <outlet property="signupButton" destination="CJa-Nm-ZHr" id="LdX-HB-Rqr"/>
+                        <outletCollection property="backgroundViews" destination="8KU-nZ-ITB" collectionClass="NSMutableArray" id="YSg-JI-Uf4"/>
+                        <outletCollection property="backgroundViews" destination="jhn-iO-Xw0" collectionClass="NSMutableArray" id="Et9-IM-Cyi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="970.39999999999998" y="129.31034482758622"/>
         </scene>
-        <!--Home View Controller-->
+        <!--홈-->
         <scene sceneID="Mgi-bP-gbG">
             <objects>
                 <viewController id="Pe0-nw-HkS" customClass="HomeViewController" customModule="_6th_iOS_firstAssignment" customModuleProvider="target" sceneMemberID="viewController">
@@ -266,6 +265,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="k3G-UV-bxy"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="홈" image="homeUnselectedIc" selectedImage="homeSelectedIc" id="uMa-32-Dha"/>
                     <size key="freeformSize" width="375" height="1200"/>
                     <connections>
                         <outlet property="logoHeightConstraint" destination="zTW-Pb-xNQ" id="rMv-3z-oSd"/>
@@ -274,7 +274,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDc-wa-9ow" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969" y="942"/>
+            <point key="canvasLocation" x="1911.2" y="941.37931034482767"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="uBS-GI-ieu">
@@ -423,10 +423,51 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="2Vw-sE-MLi">
+            <objects>
+                <tabBarController storyboardIdentifier="customTabbarController" automaticallyAdjustsScrollViewInsets="NO" id="6bY-gl-Y7n" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8dp-FK-cp0">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.18431372549019609" green="0.21176470588235294" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Pe0-nw-HkS" kind="relationship" relationship="viewControllers" id="9rz-0T-lLe"/>
+                        <segue destination="EDc-y8-0Yn" kind="relationship" relationship="viewControllers" id="cvm-VU-9Qr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iDW-Ax-kRa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="970.39999999999998" y="941.37931034482767"/>
+        </scene>
+        <!--친구-->
+        <scene sceneID="7VI-oB-ASd">
+            <objects>
+                <viewController id="EDc-y8-0Yn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DSp-TJ-Ht7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="OXu-W4-jbL"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="친구" image="person" catalog="system" selectedImage="person.fill" id="jIc-OB-eGr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="53Q-to-odR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1913" y="1773"/>
+        </scene>
     </scenes>
     <resources>
         <image name="KakaoTalk_Photo_2020-03-17-16-01-19" width="5906" height="5906"/>
+        <image name="homeSelectedIc" width="24" height="24"/>
+        <image name="homeUnselectedIc" width="24" height="24"/>
         <image name="oursoptBgImg" width="375" height="210"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="soptLogo" width="203" height="68"/>
     </resources>
 </document>
