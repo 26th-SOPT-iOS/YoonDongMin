@@ -64,5 +64,6 @@ extension SampleTableViewController: UITableViewDelegate {
         detailViewController.subTitle = dateInformations[indexPath.row].subTitle
         self.present(detailViewController, animated: true, completion: nil)
     }
+    
 }
                 

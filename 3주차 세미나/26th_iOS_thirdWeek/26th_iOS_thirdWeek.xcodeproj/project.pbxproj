@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D18E03D246BDBAB0093457D /* awdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D18E03C246BDBAB0093457D /* awdViewController.swift */; };
 		9D37D790245C99DE00508FE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D37D78F245C99DE00508FE9 /* AppDelegate.swift */; };
 		9D37D792245C99DE00508FE9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D37D791245C99DE00508FE9 /* SceneDelegate.swift */; };
 		9D37D794245C99DE00508FE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D37D793245C99DE00508FE9 /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D18E03C246BDBAB0093457D /* awdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = awdViewController.swift; sourceTree = "<group>"; };
 		9D37D78C245C99DE00508FE9 /* 26th_iOS_thirdWeek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 26th_iOS_thirdWeek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D37D78F245C99DE00508FE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D37D791245C99DE00508FE9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				9D37D7B5246007A800508FE9 /* DetailViewController.swift */,
 				9DB9BE2224631640002EB60F /* CollectionViewSampleVC.swift */,
 				9DB9BE24246322D5002EB60F /* MusicCell.swift */,
+				9D18E03C246BDBAB0093457D /* awdViewController.swift */,
 			);
 			path = 26th_iOS_thirdWeek;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D37D7AA245EAE0200508FE9 /* AudioPlayerView.swift in Sources */,
+				9D18E03D246BDBAB0093457D /* awdViewController.swift in Sources */,
 				9D37D794245C99DE00508FE9 /* ViewController.swift in Sources */,
 				9D37D7B0245FEFD500508FE9 /* WaetherCell.swift in Sources */,
 				9D37D7B6246007A800508FE9 /* DetailViewController.swift in Sources */,

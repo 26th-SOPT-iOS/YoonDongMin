@@ -18,9 +18,13 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        guard let token = UserDefaults.standard.value(forKey: "token") else { return }
+        print(token)
+        
         mainScrollView.delegate = self
         mainScrollView.contentInset = UIEdgeInsets(top: -initHeight, left: 0, bottom: 0, right: 0)
     }
+    
 }
 
 extension HomeViewController: UIScrollViewDelegate {
