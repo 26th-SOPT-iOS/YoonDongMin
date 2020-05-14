@@ -24,6 +24,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         setButtons()
         setTextField()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         setNavi()
     }
 
@@ -55,12 +59,19 @@ class ViewController: UIViewController {
                 guard let tabbarController = self.storyboard?.instantiateViewController(identifier: "customTabbarController") as? UITabBarController else { return }
                 tabbarController.modalPresentationStyle = .fullScreen
                 self.present(tabbarController, animated: true, completion: nil)
-            case .requestErr(let message): print(message)
+            case .requestErr(let message):
+                guard let message = message as? String else { return }
+                let alertViewController = UIAlertController(title: "로그인 실패", message: message, preferredStyle: .alert)
+                let action = UIAlertAction(title: "확인", style: .cancel, handler: nil)
+                alertViewController.addAction(action)
+                self.present(alertViewController, animated: true, completion: nil)
             case .pathErr: print("path")
             case .serverErr: print("serverErr")
             case .networkFail: print("networkFail")
             }
         }
     }
+    
+    
 }
 
