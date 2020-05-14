@@ -18,12 +18,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var guidLabel: UILabel!
     @IBOutlet weak var signupButton: UIButton!
     
+    private var loginCloure: ((NetworkResult<Any>) -> Void)? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setButtons()
         setTextField()
+        setLoginClosure()
+        addObserver()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,15 +46,8 @@ class ViewController: UIViewController {
         pwTextField.attributedPlaceholder = NSMutableAttributedString(string: "비밀번호", attributes: [.foregroundColor: UIColor(red: 52/255, green: 52/255, blue: 52/255, alpha: 1.0), .kern: CGFloat(-0.28)])
     }
     
-    private func setNavi() {
-        self.navigationController?.navigationBar.isHidden = true
-    }
-    
-    @IBAction func login(_ sender: Any) {
-        guard let inputID = idTextField.text else { return }
-        guard let inputPWD = pwTextField.text else { return }
-        
-        LoginService.shared.login(id: inputID, pwd: inputPWD) { networkResult in
+    private func setLoginClosure() {
+        loginCloure = { networkResult in
             switch networkResult {
             case .success(let token):
                 guard let token = token as? String else { return }
@@ -72,6 +68,28 @@ class ViewController: UIViewController {
         }
     }
     
+    private func setNavi() {
+        self.navigationController?.navigationBar.isHidden = true
+    }
     
+    private func addObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(autoLogin(_:)), name: .completeSignup, object: nil)
+    }
+    
+    @objc func autoLogin(_ notification: NSNotification) {
+        guard let id = notification.userInfo?["id"] as? String else { return }
+        guard let pwd = notification.userInfo?["pwd"] as? String else { return }
+        idTextField.text = id
+        pwTextField.text = pwd
+        
+        LoginService.shared.login(id: id, pwd: pwd, completion: loginCloure!)
+    }
+    
+    @IBAction func login(_ sender: Any) {
+        guard let inputID = idTextField.text else { return }
+        guard let inputPWD = pwTextField.text else { return }
+        
+        LoginService.shared.login(id: inputID, pwd: inputPWD, completion: loginCloure!)
+    }
 }
 

@@ -8,14 +8,19 @@
 
 import UIKit
 
+extension NSNotification.Name {
+    static let completeSignup = NSNotification.Name("completeSignup")
+}
+
 class SignupViewController: UIViewController {
-    
     static let identifier = "SignupViewController"
+    
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var pwdTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +49,27 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func signup(_ sender: Any) {
+        guard let id = idTextField.text else { return }
+        guard let pwd = pwdTextField.text else { return }
+        guard let name = nameTextField.text else { return }
+        guard let email = emailTextField.text else { return }
+        guard let phone = phoneTextField.text else { return }
         
+        SignupService.shared.signup(id: id, password: pwd, name: name, email: email, phone: phone) { networkResult in
+            switch networkResult {
+            case .success:
+                self.navigationController?.popViewController(animated: true)
+                NotificationCenter.default.post(name: .completeSignup, object: nil, userInfo: ["id": id, "pwd": pwd])
+            case .requestErr(let message):
+                guard let message = message as? String else { return }
+                let alertController = UIAlertController(title: "회원가입 실패", message: message, preferredStyle: .alert)
+                let alertAction = UIAlertAction(title: "확인", style: .cancel, handler: nil)
+                alertController.addAction(alertAction)
+                self.present(alertController, animated: true, completion: nil)
+            case .pathErr: print("")
+            case .serverErr: print("")
+            case .networkFail: print("")
+            }
+        }
     }
 }
