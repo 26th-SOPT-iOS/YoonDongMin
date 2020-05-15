@@ -32,7 +32,7 @@
 
 ### 4주차 과제
 
-1️⃣ ***[실습, 과제, 도전과제](https://github.com/26th-SOPT-iOS/YoonDongMin/tree/master/1주차 세미나/26th_iOS_firstAssignment)***
+1️⃣ ***[실습, 과제, 도전과제](https://github.com/26th-SOPT-iOS/YoonDongMin/tree/master/1%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%82%E1%85%A1/26th_iOS_firstAssignment/26th_iOS_firstAssignment)***
 
 ---
 
