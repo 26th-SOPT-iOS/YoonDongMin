@@ -26,9 +26,13 @@
 
 ### 3주차 과제
 
+<br>
+
 ---
 
 ### 4주차 과제
+
+1️⃣ ***[실습, 과제, 도전과제](https://github.com/26th-SOPT-iOS/YoonDongMin/tree/master/1주차 세미나/26th_iOS_firstAssignment)***
 
 ---
 
