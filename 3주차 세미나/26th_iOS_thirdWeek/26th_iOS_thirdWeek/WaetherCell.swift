@@ -30,5 +30,6 @@ class WeatherCell: UITableViewCell {
         weatherImageView.image = UIImage(named: weatherImageName)
         dateLabel.text = date
         subTitleLabel.text = subTitle
+        weatherImageView.image = nil
     }
 }

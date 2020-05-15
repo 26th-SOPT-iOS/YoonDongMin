@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import BEMCheckBox
+
+protocol LoginAble {
+    var logicLogin: (NetworkResult<Any>) -> Void { get }
+}
 
 class ViewController: UIViewController {
     @IBOutlet var backgroundViews: [UIView]!
@@ -17,6 +22,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var guidLabel: UILabel!
     @IBOutlet weak var signupButton: UIButton!
+    @IBOutlet weak var autoLoginCheckButton: BEMCheckBox!
     
     private var loginCloure: ((NetworkResult<Any>) -> Void)? = nil
     
@@ -25,13 +31,17 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         setButtons()
         setTextField()
-        setLoginClosure()
         addObserver()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setNavi()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        autoLoginCheckButton.setOn(false, animated: true)
     }
 
     private func setButtons() {
@@ -44,28 +54,6 @@ class ViewController: UIViewController {
         for eachField in backgroundViews { eachField.layer.cornerRadius = eachField.frame.width / 13.7 }
         idTextField.attributedPlaceholder = NSMutableAttributedString(string: "이메일", attributes: [.foregroundColor: UIColor(red: 52/255, green: 52/255, blue: 52/255, alpha: 1.0), .kern: CGFloat(-0.28)])
         pwTextField.attributedPlaceholder = NSMutableAttributedString(string: "비밀번호", attributes: [.foregroundColor: UIColor(red: 52/255, green: 52/255, blue: 52/255, alpha: 1.0), .kern: CGFloat(-0.28)])
-    }
-    
-    private func setLoginClosure() {
-        loginCloure = { networkResult in
-            switch networkResult {
-            case .success(let token):
-                guard let token = token as? String else { return }
-                UserDefaults.standard.set(token, forKey: "token")
-                guard let tabbarController = self.storyboard?.instantiateViewController(identifier: "customTabbarController") as? UITabBarController else { return }
-                tabbarController.modalPresentationStyle = .fullScreen
-                self.present(tabbarController, animated: true, completion: nil)
-            case .requestErr(let message):
-                guard let message = message as? String else { return }
-                let alertViewController = UIAlertController(title: "로그인 실패", message: message, preferredStyle: .alert)
-                let action = UIAlertAction(title: "확인", style: .cancel, handler: nil)
-                alertViewController.addAction(action)
-                self.present(alertViewController, animated: true, completion: nil)
-            case .pathErr: print("path")
-            case .serverErr: print("serverErr")
-            case .networkFail: print("networkFail")
-            }
-        }
     }
     
     private func setNavi() {
@@ -82,14 +70,42 @@ class ViewController: UIViewController {
         idTextField.text = id
         pwTextField.text = pwd
         
-        LoginService.shared.login(id: id, pwd: pwd, completion: loginCloure!)
+        LoginService.shared.login(id: id, pwd: pwd, completion: logicLogin)
     }
     
     @IBAction func login(_ sender: Any) {
         guard let inputID = idTextField.text else { return }
         guard let inputPWD = pwTextField.text else { return }
         
-        LoginService.shared.login(id: inputID, pwd: inputPWD, completion: loginCloure!)
+        LoginService.shared.login(id: inputID, pwd: inputPWD, completion: logicLogin)
     }
 }
 
+
+extension ViewController: LoginAble {
+    var logicLogin: (NetworkResult<Any>) -> Void {
+        return { (networkResult) in
+            switch networkResult {
+            case .success(let token):
+                guard let token = token as? String else { return }
+                guard let id = self.idTextField.text else { return }
+                guard let pwd = self.pwTextField.text else { return }
+                if self.autoLoginCheckButton.on { DataHandler.shared.save(id, pwd) }
+                UserDefaults.standard.set(token, forKey: "token")
+                guard let tabbarController = self.storyboard?.instantiateViewController(identifier: "customTabbarController") as? UITabBarController else { return }
+                tabbarController.modalPresentationStyle = .fullScreen
+                self.present(tabbarController, animated: true, completion: nil)
+            case .requestErr(let message):
+                guard let message = message as? String else { return }
+                let alertViewController = UIAlertController(title: "로그인 실패", message: message, preferredStyle: .alert)
+                let action = UIAlertAction(title: "확인", style: .cancel, handler: nil)
+                alertViewController.addAction(action)
+                self.present(alertViewController, animated: true, completion: nil)
+            case .pathErr: print("path")
+            case .serverErr: print("serverErr")
+            case .networkFail: print("networkFail")
+            }
+            ()
+        }
+    }
+}

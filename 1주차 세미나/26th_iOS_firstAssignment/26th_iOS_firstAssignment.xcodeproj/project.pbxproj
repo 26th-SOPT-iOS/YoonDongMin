@@ -24,6 +24,7 @@
 		9DDEEF0C242DF9A100B36313 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DDEEF0A242DF9A100B36313 /* LaunchScreen.storyboard */; };
 		9DDEEF14242E04D700B36313 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDEEF13242E04D700B36313 /* SignupViewController.swift */; };
 		9DDEEF16242E079100B36313 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDEEF15242E079100B36313 /* MainViewController.swift */; };
+		9DFE1C1D246E7865003101E5 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFE1C1C246E7865003101E5 /* DataHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		9DDEEF0D242DF9A100B36313 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DDEEF13242E04D700B36313 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		9DDEEF15242E079100B36313 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9DFE1C1C246E7865003101E5 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 		BD7C589612556439BB057235 /* Pods-26th_iOS_firstAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-26th_iOS_firstAssignment.debug.xcconfig"; path = "Target Support Files/Pods-26th_iOS_firstAssignment/Pods-26th_iOS_firstAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +99,7 @@
 				9D18E04F246C7E1A0093457D /* Extensions */,
 				9D18E04E246C7DF80093457D /* NetworkData */,
 				9D18E04A246C7D910093457D /* ViewControllers */,
+				9DFE1C19246E775C003101E5 /* Handler */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -175,6 +178,14 @@
 				9DDEEF0D242DF9A100B36313 /* Info.plist */,
 			);
 			path = 26th_iOS_firstAssignment;
+			sourceTree = "<group>";
+		};
+		9DFE1C19246E775C003101E5 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				9DFE1C1C246E7865003101E5 /* DataHandler.swift */,
+			);
+			path = Handler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +311,7 @@
 				9DDEEF02242DF99C00B36313 /* SceneDelegate.swift in Sources */,
 				9D18E041246BE6F10093457D /* APIConstatns.swift in Sources */,
 				9D18E053246C7EB80093457D /* SignupService.swift in Sources */,
+				9DFE1C1D246E7865003101E5 /* DataHandler.swift in Sources */,
 				9D18E051246C7E320093457D /* SignupData.swift in Sources */,
 				9DDEEF16242E079100B36313 /* MainViewController.swift in Sources */,
 				9D18E045246BE8F00093457D /* LoginService.swift in Sources */,

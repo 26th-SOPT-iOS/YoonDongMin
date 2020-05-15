@@ -48,6 +48,8 @@ extension SampleTableViewController: UITableViewDataSource {
         weatherCell.setDateInformation(weatherImageName: dateInformations[indexPath.row].weather.getImageName(),
                                        date: dateInformations[indexPath.row].date,
                                        subTitle: dateInformations[indexPath.row].subTitle)
+//        weatherCell.separatorInset = UIEdgeInsets(top: 0, left: tableView.frame.width, bottom: 0, right: 0)
+        
         return weatherCell
     }
 }

@@ -17,6 +17,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        if let windowScene = scene as? UIWindowScene {
+            let window = UIWindow(windowScene: windowScene)
+            self.window = window
+            window.makeKeyAndVisible()
+            guard let pair: (id: String,pwd: String) = DataHandler.shared.load() else {
+                let startStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                guard let startController = startStoryboard.instantiateViewController(identifier: "customNavigationController") as? UINavigationController else { return }
+                window.rootViewController = startController
+                return
+            }
+            LoginService.shared.login(id: pair.id, pwd: pair.pwd, completion: logicLogin)
+        }
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
@@ -51,3 +63,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+extension SceneDelegate: LoginAble {
+    var logicLogin: (NetworkResult<Any>) -> Void {
+        return { (networkResult) in
+            let startStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+            switch networkResult {
+            case .success(let token):
+                guard let token = token as? String else { return }
+                UserDefaults.standard.set(token, forKey: "token")
+                guard let startController = startStoryBoard.instantiateViewController(identifier: "customTabbarController") as? UITabBarController else { return }
+                self.window?.rootViewController = startController
+            default:
+                let alertController = UIAlertController(title: "네트워크 오류", message: "인터넷 연결을 해주세요", preferredStyle: .alert)
+                let alertAction = UIAlertAction(title: "확인", style: .cancel, handler: nil)
+                alertController.addAction(alertAction)
+                guard let startController = startStoryBoard.instantiateViewController(identifier: "customNavigationController") as? UINavigationController else { return }
+                self.window?.rootViewController = startController
+//                self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
+            }
+        }
+        ()
+    }
+}
