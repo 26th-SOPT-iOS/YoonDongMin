@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 extension NSNotification.Name {
     static let completeSignup = NSNotification.Name("completeSignup")
@@ -25,7 +26,7 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        setButtons()
+        setButtons()        
     }
     
     override func viewWillAppear(_ animated: Bool) {

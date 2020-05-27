@@ -22,6 +22,7 @@ struct LoginService {
         let dataRequest = Alamofire.request(APIConstants.signinURL, method: .post, parameters: makeParameter(id, pwd), encoding: JSONEncoding.default, headers: header)
         
         dataRequest.responseData { dataResponse in
+            dataResponse.result
             switch dataResponse.result {
             case .success:
                 guard let statusCode = dataResponse.response?.statusCode else { return }

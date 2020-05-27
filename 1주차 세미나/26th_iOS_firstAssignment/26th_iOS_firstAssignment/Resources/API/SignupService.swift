@@ -28,7 +28,9 @@ struct SignupService {
                 guard let data = dataResponse.result.value else { return }
                 let networkResult = self.judge(by: statusCode, data)
                 completion(networkResult)
-            case .failure(let err): completion(.networkFail)
+            case .failure(let err):
+                print(err.localizedDescription)
+                completion(.networkFail)
             }
         }
     }

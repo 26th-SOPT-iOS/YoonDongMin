@@ -24,8 +24,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var autoLoginCheckButton: BEMCheckBox!
     
-    private var loginCloure: ((NetworkResult<Any>) -> Void)? = nil
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -81,7 +79,6 @@ class ViewController: UIViewController {
     }
 }
 
-
 extension ViewController: LoginAble {
     var logicLogin: (NetworkResult<Any>) -> Void {
         return { (networkResult) in
@@ -94,7 +91,7 @@ extension ViewController: LoginAble {
                 UserDefaults.standard.set(token, forKey: "token")
                 guard let tabbarController = self.storyboard?.instantiateViewController(identifier: "customTabbarController") as? UITabBarController else { return }
                 tabbarController.modalPresentationStyle = .fullScreen
-                self.present(tabbarController, animated: true, completion: nil)
+                UIApplication.shared.windows.filter { $0.isKeyWindow }.first?.rootViewController = tabbarController
             case .requestErr(let message):
                 guard let message = message as? String else { return }
                 let alertViewController = UIAlertController(title: "로그인 실패", message: message, preferredStyle: .alert)
