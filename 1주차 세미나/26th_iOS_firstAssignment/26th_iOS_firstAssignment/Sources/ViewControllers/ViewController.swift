@@ -89,6 +89,7 @@ extension ViewController: LoginAble {
                 guard let pwd = self.pwTextField.text else { return }
                 if self.autoLoginCheckButton.on { DataHandler.shared.save(id, pwd) }
                 UserDefaults.standard.set(token, forKey: "token")
+                print(token)
                 guard let tabbarController = self.storyboard?.instantiateViewController(identifier: "customTabbarController") as? UITabBarController else { return }
                 tabbarController.modalPresentationStyle = .fullScreen
                 UIApplication.shared.windows.filter { $0.isKeyWindow }.first?.rootViewController = tabbarController

@@ -19,10 +19,10 @@ struct LoginService {
     func login(id: String, pwd: String, completion: @escaping (NetworkResult<Any>) -> Void) {
         let header: HTTPHeaders = ["Content-Type": "application/json"]
         
+
         let dataRequest = Alamofire.request(APIConstants.signinURL, method: .post, parameters: makeParameter(id, pwd), encoding: JSONEncoding.default, headers: header)
         
         dataRequest.responseData { dataResponse in
-            dataResponse.result
             switch dataResponse.result {
             case .success:
                 guard let statusCode = dataResponse.response?.statusCode else { return }
@@ -49,5 +49,5 @@ struct LoginService {
         guard let tokenData = decodedData.data else { return .requestErr(decodedData.message) }
         return .success(tokenData.jwt)
     }
-    
+     
 }

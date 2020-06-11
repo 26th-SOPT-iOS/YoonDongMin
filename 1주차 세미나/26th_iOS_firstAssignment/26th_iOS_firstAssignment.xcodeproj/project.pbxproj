@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8CF99604FF089EEA1EE8B83F /* Pods_26th_iOS_firstAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 420B08C6EA0CF9FD8B03543B /* Pods_26th_iOS_firstAssignment.framework */; };
+		9D16A44D2491F4AC005E691E /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D16A44C2491F4AC005E691E /* ProfileService.swift */; };
+		9D16A44F2491F89B005E691E /* ProfileImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D16A44E2491F89B005E691E /* ProfileImageData.swift */; };
 		9D18E03B246A7A2F0093457D /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D18E03A246A7A2F0093457D /* UIColor+Additions.swift */; };
 		9D18E041246BE6F10093457D /* APIConstatns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D18E040246BE6F00093457D /* APIConstatns.swift */; };
 		9D18E043246BE74A0093457D /* SIgininData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D18E042246BE74A0093457D /* SIgininData.swift */; };
@@ -16,6 +18,10 @@
 		9D18E051246C7E320093457D /* SignupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D18E050246C7E320093457D /* SignupData.swift */; };
 		9D18E053246C7EB80093457D /* SignupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D18E052246C7EB70093457D /* SignupService.swift */; };
 		9D2E5ABD247E713100C3C82A /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2E5ABC247E713100C3C82A /* UIImageView+Extension.swift */; };
+		9D2E5ABF247F989500C3C82A /* UploadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2E5ABE247F989500C3C82A /* UploadService.swift */; };
+		9D2E5AC1247FAA8900C3C82A /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2E5AC0247FAA8900C3C82A /* ProfileData.swift */; };
+		9D2E5AC424801BAE00C3C82A /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2E5AC324801BAE00C3C82A /* FriendCell.swift */; };
+		9D2E5AC624801BC000C3C82A /* MyProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2E5AC524801BC000C3C82A /* MyProfileCell.swift */; };
 		9D6CAC7B247E3CA9007BA89B /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CAC7A247E3CA9007BA89B /* FriendViewController.swift */; };
 		9D6CAC7D247E3F00007BA89B /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CAC7C247E3F00007BA89B /* DownloadService.swift */; };
 		9DC3A46D2452E482005768F3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC3A46C2452E482005768F3 /* HomeViewController.swift */; };
@@ -33,6 +39,8 @@
 /* Begin PBXFileReference section */
 		25522D658FEB3FE1D73B7281 /* Pods-26th_iOS_firstAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-26th_iOS_firstAssignment.release.xcconfig"; path = "Target Support Files/Pods-26th_iOS_firstAssignment/Pods-26th_iOS_firstAssignment.release.xcconfig"; sourceTree = "<group>"; };
 		420B08C6EA0CF9FD8B03543B /* Pods_26th_iOS_firstAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_26th_iOS_firstAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D16A44C2491F4AC005E691E /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		9D16A44E2491F89B005E691E /* ProfileImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageData.swift; sourceTree = "<group>"; };
 		9D18E03A246A7A2F0093457D /* UIColor+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 		9D18E040246BE6F00093457D /* APIConstatns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstatns.swift; sourceTree = "<group>"; };
 		9D18E042246BE74A0093457D /* SIgininData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SIgininData.swift; path = ../../SIgininData.swift; sourceTree = "<group>"; };
@@ -41,6 +49,10 @@
 		9D18E050246C7E320093457D /* SignupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupData.swift; sourceTree = "<group>"; };
 		9D18E052246C7EB70093457D /* SignupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupService.swift; sourceTree = "<group>"; };
 		9D2E5ABC247E713100C3C82A /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		9D2E5ABE247F989500C3C82A /* UploadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadService.swift; sourceTree = "<group>"; };
+		9D2E5AC0247FAA8900C3C82A /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
+		9D2E5AC324801BAE00C3C82A /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		9D2E5AC524801BC000C3C82A /* MyProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileCell.swift; sourceTree = "<group>"; };
 		9D6CAC7A247E3CA9007BA89B /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
 		9D6CAC7C247E3F00007BA89B /* DownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
 		9DC3A46C2452E482005768F3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +114,7 @@
 			children = (
 				9DDEEEFF242DF99C00B36313 /* AppDelegate.swift */,
 				9DDEEF01242DF99C00B36313 /* SceneDelegate.swift */,
+				9D2E5AC224801B9100C3C82A /* TableViewCell */,
 				9D18E04F246C7E1A0093457D /* Extensions */,
 				9D18E04E246C7DF80093457D /* NetworkData */,
 				9D18E04A246C7D910093457D /* ViewControllers */,
@@ -138,6 +151,8 @@
 				9D18E046246BED9B0093457D /* NetworkResult.swift */,
 				9D18E044246BE8F00093457D /* LoginService.swift */,
 				9D6CAC7C247E3F00007BA89B /* DownloadService.swift */,
+				9D2E5ABE247F989500C3C82A /* UploadService.swift */,
+				9D16A44C2491F4AC005E691E /* ProfileService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -147,6 +162,8 @@
 			children = (
 				9D18E042246BE74A0093457D /* SIgininData.swift */,
 				9D18E050246C7E320093457D /* SignupData.swift */,
+				9D2E5AC0247FAA8900C3C82A /* ProfileData.swift */,
+				9D16A44E2491F89B005E691E /* ProfileImageData.swift */,
 			);
 			path = NetworkData;
 			sourceTree = "<group>";
@@ -158,6 +175,15 @@
 				9D2E5ABC247E713100C3C82A /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9D2E5AC224801B9100C3C82A /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9D2E5AC324801BAE00C3C82A /* FriendCell.swift */,
+				9D2E5AC524801BC000C3C82A /* MyProfileCell.swift */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		9DDEEEF3242DF99C00B36313 = {
@@ -318,8 +344,12 @@
 				9D18E043246BE74A0093457D /* SIgininData.swift in Sources */,
 				9DDEEF00242DF99C00B36313 /* AppDelegate.swift in Sources */,
 				9DDEEF02242DF99C00B36313 /* SceneDelegate.swift in Sources */,
+				9D2E5AC624801BC000C3C82A /* MyProfileCell.swift in Sources */,
 				9D18E041246BE6F10093457D /* APIConstatns.swift in Sources */,
 				9D18E053246C7EB80093457D /* SignupService.swift in Sources */,
+				9D16A44F2491F89B005E691E /* ProfileImageData.swift in Sources */,
+				9D2E5ABF247F989500C3C82A /* UploadService.swift in Sources */,
+				9D2E5AC1247FAA8900C3C82A /* ProfileData.swift in Sources */,
 				9DFE1C1D246E7865003101E5 /* DataHandler.swift in Sources */,
 				9D6CAC7D247E3F00007BA89B /* DownloadService.swift in Sources */,
 				9D6CAC7B247E3CA9007BA89B /* FriendViewController.swift in Sources */,
@@ -329,6 +359,8 @@
 				9DC3A46D2452E482005768F3 /* HomeViewController.swift in Sources */,
 				9D2E5ABD247E713100C3C82A /* UIImageView+Extension.swift in Sources */,
 				9D18E03B246A7A2F0093457D /* UIColor+Additions.swift in Sources */,
+				9D2E5AC424801BAE00C3C82A /* FriendCell.swift in Sources */,
+				9D16A44D2491F4AC005E691E /* ProfileService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

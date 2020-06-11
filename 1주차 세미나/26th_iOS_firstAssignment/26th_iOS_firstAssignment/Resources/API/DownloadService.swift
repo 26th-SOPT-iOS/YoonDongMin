@@ -22,7 +22,7 @@ struct DownloadService {
             switch response.statusCode {
             case 200:
                 try? FileManager.default.copyItem(at: location!, to: cachePath!)
-                complection(.success(cachePath))
+                complection(.success(cachePath ?? nil))
             case 400: complection(.pathErr)
             case 500: complection(.serverErr)
             default: complection(.networkFail)

@@ -9,4 +9,5 @@ target '26th_iOS_firstAssignment' do
   pod 'Alamofire', '~> 4.8.2'
   pod 'Kingfisher', '~> 5.0'
   pod 'BEMCheckBox'
+  pod "SkeletonView"
 end
