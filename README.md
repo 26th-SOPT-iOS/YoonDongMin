@@ -26,7 +26,7 @@
 
 ### 3주차 과제
 
-<br>
+1️⃣ ***[과제, 도전과제](https://github.com/26th-SOPT-iOS/YoonDongMin/tree/master/1%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%82%E1%85%A1/26th_iOS_firstAssignment)***
 
 ---
 
@@ -38,15 +38,19 @@
 
 ### 5주차 과제
 
+❌ **합동세미나**
+
 ---
 
 ### 6주차 과제
+
+❌ **합동세미나**
 
 ---
 
 ### 7주차 과제
 
----
+1️⃣ ***[실습, 과제](https://github.com/26th-SOPT-iOS/YoonDongMin/tree/master/1%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%82%E1%85%A1/26th_iOS_firstAssignment)***
 
 
-안녕하세요 여러분들
+
